@@ -5,6 +5,16 @@ You can use this as a comprehensive guide for C++.
 
 # Table of Contents
 - [Introduction to the C++ Programming Language](#introduction-to-the-c++-programming-language)
+    - [Including Libraries](#including-libraries)
+    - [Main Function](#main-function)
+    - [Input and Output](#input-and-output)
+    - [Variables and Data Types](#variables-and-data-types)
+    - [Control Structures](#control-structures)
+        - [If Else Statements](#if-else-statements)
+        - [While Loop](#while-loop)
+        - [For Loop](#for-loop)
+        - [Switch Statement](#switch-statement)
+    - [Functions](#functions)
 
 # Introduction to the C++ Programming Language
 
@@ -21,6 +31,11 @@ Use `std:cin` for input and `std:cout` for output available in the `iostream` li
 ## Variables and Data Types
 Variables must be declared with a data type.
 Here are the data types that can be used.
+- `int`: integer values
+- `float`: single-precision floating-point values
+- `double`: double-precision floating-point values
+- `char`: single characters
+- `bool`: boolean values
 
 ```cpp
 int x;
