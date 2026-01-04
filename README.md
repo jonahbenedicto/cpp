@@ -8,6 +8,7 @@ You can use this as a comprehensive guide for C++.
 - [Code Editors](#code-editors)
 - [Hello World](#hello-world)
 - [Operations](#operations)
+- [Control Structures and Statements](#control-structures-and-statements)
 
 # Installation
 
@@ -48,10 +49,10 @@ g++ --version
 
 # Code Editors
 Here are popular code editors and IDEs for C++:
-- Visual Studio: Visual Studio is an Integrated Development Environment (IDE) for Windows, developed by Microsoft. It includes its own integrated compiler known as Microsoft Visual C++ (MSVC).
-- Visual Studio Code (VSCode): Visual Studio Code is a popular, free, open-source, and lightweight code editor developed by Microsoft. It offers an extensive library of extensions that enhance functionality for C++ development.
-- Sublime Text: Sublime Text is a cross-platform text editor that is quite popular among developers due to its speed and minimalist design. It supports C++ with the help of plugins and has a variety of themes and packages available for customization.
-- CLion: CLion is an Integrated Development Environment (IDE) developed by JetBrains specifically for C and C++ developers. It provides advanced features like code completion, refactoring support, debugging, and more. It's worth noting that CLion is a commercial IDE, but there is community version available.
+- Visual Studio
+- Visual Studio Code (VSCode)
+- Sublime Text
+- CLion
 
 # Hello World
 
@@ -77,7 +78,7 @@ Execute the program
 ```
 
 Breakdown of program:
-- `#include <iostream> - Header files and preprocessing directives
+- `#include <iostream>` - Header files and preprocessing directives
 - `main()` - Entry point into the program.
 - `std::cout` - Output to the terminal
 - `return` - Return statement
@@ -167,3 +168,7 @@ pointer -> property
 ```
 (int)x
 ```
+
+# Control Structures and Statements
+
+## If-Else Statement
