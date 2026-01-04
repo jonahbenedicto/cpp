@@ -172,3 +172,70 @@ pointer -> property
 # Control Structures and Statements
 
 ## If-Else Statement
+```
+if (condition1) {
+    block of code to execute 
+} 
+else if (condition2) {
+    block of code to execute
+} 
+else {
+    block of code to execute 
+}
+```
+[if-else.cpp](./if-else.cpp)
+
+## Switch Statement
+```
+switch (variable) {
+    case value1: 
+        block of code to execute
+        break;
+    case value2: 
+        block of code to execute
+        break;
+    case value3:
+        block of code to execute
+        break;
+    default:
+        block of code to execute
+}
+```
+[switch.cpp](./switch.cpp)
+
+## Goto
+```
+if (condition) {
+    goto label;
+}
+
+block of code to execute
+
+label:
+    block of code to execute
+```
+[goto.cpp](./goto.cpp)
+
+## For Loop
+```
+for (initialization; condition; increment/decrement) {
+    block of code to execute
+}
+```
+[for-loop.cpp](./for-loop.cpp)
+
+## While Loop
+```
+while (condition) {
+    block of code to execute
+}
+```
+[while-loop](./while-loop.cpp)
+
+## Do While Loop
+```
+do {
+    block of code to execute
+} while (condition);
+```
+[do-while-loop.cpp](do-while-loop.cpp)
