@@ -8,9 +8,25 @@ You can use this as a comprehensive guide for C++.
 - [Code Editors](#code-editors)
 - [Hello World](#hello-world)
 - [Operations](#operations)
+    - [Arithmetic Operators](#arithmetic-operators)
+    - [Types of Operators](#types-of-operators)
+    - [Relational Operators](#relational-operators)
+    - [Logical Operators](#logical-operators)
+    - [Bitwise Operators](#bitwise-operators)
+    - [Assignment Operators](#assignment-operators)
+    - [Ternary Operators](#ternary-operators)
+    - [Miscellaneous Operators](#miscellaneous-operators)
 - [Control Structures and Statements](#control-structures-and-statements)
-- [Functions](#functions)
+    - [If Else Statement](#if-else-statement)
+    - [Switch Statement](#switch-statement)
+    - [Goto](#goto)
+    - [For Loop](#for-loop)
+    - [Do While Loop](#do-while-loop)
+    - [While Loop](#while-loop)
+- [Function](#function)
+- [Function Prototype](#function-prototype)
 - [Operator Overloading](#operator-overloading)
+- [Lambdas](#lambdas)
 
 # Installation
 
@@ -173,7 +189,7 @@ pointer -> property
 
 # Control Structures and Statements
 
-## If-Else Statement
+## If Else Statement
 ```
 if (condition1) {
     block of code to execute 
@@ -242,7 +258,7 @@ do {
 ```
 [do-while-loop.cpp](do-while-loop.cpp)
 
-# Functions
+# Function
 
 There are two types of functions:
 - Standard library functions; and
@@ -256,7 +272,7 @@ return_type function_name(parameter list) {
 ```
 [function.cpp](./function.cpp)
 
-## Function prototype
+# Function prototype
 A function prototype is a declaration of a function without its body.
 The purpose of a function prototype is to be able to access the function 
 before it is defined.
@@ -268,5 +284,48 @@ Use `operator` keyword.
 
 [operator-overloading.cpp](./operator-overloading.cpp)
 
+# Lambdas
 
+Here is the structure of a lambda function:
+```cpp
+[capture-list](parameters) -> return_type {
+    // function body
+};
+```
 
+**Usage Examples**
+
+Lambda function with no capture, parameters, or return type.
+```cpp
+auto printHello = []() {
+    std::cout << "Hello, World!\n";
+};
+printHello(); // Output: Hello, World!
+```
+
+Lambda function with parameters.
+```cpp
+auto add = [](int a, int b) {
+    return a + b;
+};
+int result = add(3, 4); // result = 7
+```
+
+Lambda function with capture-by-value.
+```cpp
+int multiplier = 3;
+auto times = [multiplier](int a) {
+    return a * multiplier;
+};
+int result = times(5); // result = 15
+```
+
+Lambda function with capture-by-reference.
+```cpp
+int expiresInDays = 45;
+auto updateDays = [&expiresInDays](int newDays) {
+    expiresInDays = newDays;
+};
+updateDays(30); // expiresInDays = 30
+```
+[lambdas.cpp](./lambdas.cpp)
