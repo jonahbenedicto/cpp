@@ -10,6 +10,7 @@ You can use this as a comprehensive guide for C++.
 - [Operations](#operations)
 - [Control Structures and Statements](#control-structures-and-statements)
 - [Functions](#functions)
+- [Operator Overloading](#operator-overloading)
 
 # Installation
 
@@ -260,5 +261,12 @@ A function prototype is a declaration of a function without its body.
 The purpose of a function prototype is to be able to access the function 
 before it is defined.
 [function-prototype.cpp](./function-prototype.cpp)
+
+# Operator Overloading
+Operator overloading is a feature that allows you to redefine operators for user defined types such as classes and structs.
+Use `operator` keyword.
+
+[operator-overloading.cpp](./operator-overloading.cpp)
+
 
 
