@@ -4,5 +4,52 @@ This repository contains my personal study notes for C++.
 You can use this as a comprehensive guide for C++.
 
 # Table of Contents
-- [Introduction to the C++ Programming Language](./introduction/INTRODUCTION.md)
-- [What is C++](./what-is-cpp/WHAT_IS_CPP.md)
+- [Installation](#installation)
+- [Code Editors](#code-editors)
+- [Hello World](#hello-world)
+
+# Installation
+
+To be able to use the programming language C++ you need to have a compiler that
+compiles C++ source code into machine code executable. 
+
+## Windows
+To install on windows:
+Download `Microsoft Visual Studio IDE`. 
+This will include the Microsoft Visual C++ Compiler (MSVC).
+
+## MacOS
+To install on macos:
+You can install the Apple LLVM `clang` compiler. Enter command into the terminal to install:
+```bash
+xcode-select --install
+```
+
+## Linux
+To install on linux:
+You can install the GNU Compiler Collection (GCC) through your distribution's package manager.
+- Ubuntu, Debian and derivatives:
+```bash
+sudo apt-get install g++ build-essential
+```
+- Fedora, CentOS, RHEL, and derivatives:
+```bash
+sudo dnf install gcc-c++ make
+```
+- Arch Linux and derivatives:
+```bash
+sudo pacman -S gcc make
+```
+Enter command into the terminal to check:
+```bash
+g++ --version
+```
+
+# Code Editors
+Here are popular code editors and IDEs for C++:
+- Visual Studio: Visual Studio is an Integrated Development Environment (IDE) for Windows, developed by Microsoft. It includes its own integrated compiler known as Microsoft Visual C++ (MSVC).
+- Visual Studio Code (VSCode): Visual Studio Code is a popular, free, open-source, and lightweight code editor developed by Microsoft. It offers an extensive library of extensions that enhance functionality for C++ development.
+- Sublime Text: Sublime Text is a cross-platform text editor that is quite popular among developers due to its speed and minimalist design. It supports C++ with the help of plugins and has a variety of themes and packages available for customization.
+- CLion: CLion is an Integrated Development Environment (IDE) developed by JetBrains specifically for C and C++ developers. It provides advanced features like code completion, refactoring support, debugging, and more. It's worth noting that CLion is a commercial IDE, but there is community version available.
+
+# Hello World
