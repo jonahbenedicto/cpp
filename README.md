@@ -92,6 +92,7 @@ Breakdown of program:
 5. Modulo (%)
 6. Increment (++)
 7. Decrement (--)
+
 [arithmetic.cpp](./arithmetic.cpp)
 
 ## Types of Operators
@@ -106,12 +107,14 @@ Breakdown of program:
 - Less than (<)
 - Greater than or equal to (>=)
 - Less than or equal to (<=)
+
 [relational.cpp](./relational.cpp)
 
 ## Logical Operators
 - AND (&&)
 - OR (||)
 - NOT (!)
+
 [logical.cpp](./logical.cpp)
 
 ## Bitwise Operators
@@ -121,6 +124,7 @@ Breakdown of program:
 - Bitwise Left Shift (<<)
 - Bitwise Right Shift (>>)
 - Bitwise NOT (~)
+
 [bitwise.cpp](./bitwise.cpp)
 
 ## Assignment Operators
@@ -129,6 +133,7 @@ Breakdown of program:
 - Subtract and assignment (-=)
 - Multiply and assignment (*=)
 - Division and assignment (/=)
+
 [assignment.cpp](./assignment.cpp)
 
 ## Ternary Operators
