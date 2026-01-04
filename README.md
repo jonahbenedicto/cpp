@@ -7,6 +7,7 @@ You can use this as a comprehensive guide for C++.
 - [Installation](#installation)
 - [Code Editors](#code-editors)
 - [Hello World](#hello-world)
+- [Operations](#operations)
 
 # Installation
 
@@ -81,4 +82,83 @@ Breakdown of program:
 - `std::cout` - Output to the terminal
 - `return` - Return statement
 
+# Operations
 
+## Arithmetic Operators
+1. Addition (+)
+2. Subtraction (-)
+3. Multiplication (*) 
+4. Division (/)
+5. Modulo (%)
+6. Increment (++)
+7. Decrement (--)
+[arithmetic.cpp](./arithmetic.cpp)
+
+## Types of Operators
+- Unary operator
+- Binary operator
+- Ternary operator
+
+## Relational Operators
+- Equal to (==)
+- Not equal to (!=)
+- Greater than (>)
+- Less than (<)
+- Greater than or equal to (>=)
+- Less than or equal to (<=)
+[relational.cpp](./relational.cpp)
+
+## Logical Operators
+- AND (&&)
+- OR (||)
+- NOT (!)
+[logical.cpp](./logical.cpp)
+
+## Bitwise Operators
+- Bitwise AND (&)
+- Bitwise OR (|)
+- Bitwise XOR (^)
+- Bitwise Left Shift (<<)
+- Bitwise Right Shift (>>)
+- Bitwise NOT (~)
+[bitwise.cpp](./bitwise.cpp)
+
+## Assignment Operators
+- Assignment (=)
+- Add and assignment (+=)
+- Subtract and assignment (-=)
+- Multiply and assignment (*=)
+- Division and assignment (/=)
+[assignment.cpp](./assignment.cpp)
+
+## Ternary Operators
+The structure of a ternary operator or conditional:
+```
+Expression1 ? Expression2 : Expression3
+```
+
+## Miscellaneous Operators
+1. Size operator `sizeof`
+```cpp
+sizeof(char)
+```
+2. Comma operator `,`
+```
+int a, b, c;
+```
+3. Address operator `&`
+```
+&var
+```
+4. Dot operator `.`
+```
+object.property
+```
+5. Arrow operator `->`
+```
+pointer -> property
+```
+6. Casting operator `( )`
+```
+(int)x
+```
