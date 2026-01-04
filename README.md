@@ -9,6 +9,7 @@ You can use this as a comprehensive guide for C++.
 - [Hello World](#hello-world)
 - [Operations](#operations)
 - [Control Structures and Statements](#control-structures-and-statements)
+- [Functions](#functions)
 
 # Installation
 
@@ -239,3 +240,25 @@ do {
 } while (condition);
 ```
 [do-while-loop.cpp](do-while-loop.cpp)
+
+# Functions
+
+There are two types of functions:
+- Standard library functions; and
+- User-defined functions.
+
+Here is the structure of a function:
+```
+return_type function_name(parameter list) {
+    function body
+}
+```
+[function.cpp](./function.cpp)
+
+## Function prototype
+A function prototype is a declaration of a function without its body.
+The purpose of a function prototype is to be able to access the function 
+before it is defined.
+[function-prototype.cpp](./function-prototype.cpp)
+
+
