@@ -53,3 +53,32 @@ Here are popular code editors and IDEs for C++:
 - CLion: CLion is an Integrated Development Environment (IDE) developed by JetBrains specifically for C and C++ developers. It provides advanced features like code completion, refactoring support, debugging, and more. It's worth noting that CLion is a commercial IDE, but there is community version available.
 
 # Hello World
+
+[hello-world.cpp](./hello-world.cpp)
+```cpp
+#include <iostream>
+
+int main() {
+  std::cout << "Hello, World!\n";
+  return 0;
+}
+```
+
+Compile the program
+```bash
+clang++ hello-world.cpp
+```
+This will create an executable file `a.out`
+
+Execute the program
+```bash
+./a.out
+```
+
+Breakdown of program:
+- `#include <iostream> - Header files and preprocessing directives
+- `main()` - Entry point into the program.
+- `std::cout` - Output to the terminal
+- `return` - Return statement
+
+
