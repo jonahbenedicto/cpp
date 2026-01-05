@@ -37,6 +37,12 @@ You can use this as a comprehensive guide for C++.
     - [Dynamic Typing](#dynamic-typing)
     - [Run-Time Type Identification](#run-time-type-identification)
 - [Pointers and References](#pointers-and-references)
+    - [Pointers](#pointers)
+    - [References](#references)
+    - [Constant Pointers](#constant-pointers)
+    - [Pointer to Constant](#pointer-to-constant)
+    - [Constant Pointer to Constant](#constant-pointer-to-constant)
+    - [Constant Pointers and Pointers to Constants Summary](#constant-pointers-and-pointers-to-constants-summary)
 
 # Installation
 
@@ -578,7 +584,7 @@ int num = 10;
 int &ref = num; // Reference 'ref' is now an alias of 'num'
 ```
 
-## Constant Pointers
+## Constant Pointer
 
 A constant pointer is a pointer that cannot change the address it holds after intialisation.
 
@@ -595,4 +601,39 @@ Rule:
 - You cannot change what it points to.
 - You can change the value at the address.
 
+## Pointer to Constant
+A pointer to constant is a pointer that can change what address it points to but the value at that address cannot be changed.
 
+```cpp
+int x = 10;
+int y = 20;
+const int* ptr = &x;   // Pointer to constant int
+
+// *ptr = 15;          // Error: cannot modify x through ptr
+ptr = &y;              // Allowed: can point to another variable
+```
+
+Rule:
+- You can change what it points to.
+- You cannot change the value at the address through this pointer.
+
+## Constant Pointer to Constant
+A constant pointer to constant is a pointer that cannot change what address it points to and cannot change the value at that address.
+
+```cpp
+int x = 10;
+int y = 20;
+const int* const ptr = &x;   // Constant pointer to constant int
+
+// *ptr = 15;                // Error: cannot modify x
+// ptr = &y;                 // Error: cannot make ptr point to y
+```
+
+Rule:
+- You cannot change what it points to.
+- You cannot change the value at the address through this pointer.
+
+## Constant Pointers and Pointers to Constants Summary
+- `int* const ptr`: constant pointer, mutable pointee
+- `const int* ptr`: mutable pointer, constant pointee
+- `const int* const ptr`: constant pointer, constant pointee
