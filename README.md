@@ -27,6 +27,9 @@ You can use this as a comprehensive guide for C++.
 - [Function Prototype](#function-prototype)
 - [Operator Overloading](#operator-overloading)
 - [Lambdas](#lambdas)
+- [Static Polymorphism](#static-polymorphism)
+    - [Function Overloading](#function-overloading)
+    - [Templates](#templates)
 
 # Installation
 
@@ -329,3 +332,134 @@ auto updateDays = [&expiresInDays](int newDays) {
 updateDays(30); // expiresInDays = 30
 ```
 [lambdas.cpp](./lambdas.cpp)
+
+# Static Polymorphism
+There are two ways of using static polymorphism in the C++ Programming Language:
+- Function Overloading
+- Templates
+
+## Function Overloading
+Function with the same name but different parameter types or number of 
+parameters.
+```
+#include <iostream>
+
+void print(int i) {
+    std::cout << "Printing int: " << i << '\n';
+}
+
+void print(double d) {
+    std::cout << "Printing double: " << d << '\n';
+}
+
+void print(const char* s) {
+    std::cout << "Printing string: " << s << '\n';
+}
+
+int main() {
+    print(5);          // Calls print(int i)
+    print(3.14);       // Calls print(double d)
+    print("Hello");    // Calls print(const char* s)
+
+    return 0;
+}
+```
+
+## Templates
+Generic functions or classes.
+```
+#include <iostream>
+
+// Template function to print any type
+template<typename T>
+void print(const T& value) {
+    std::cout << "Printing value: " << value << '\n';
+}
+
+int main() {
+    print(42);           // int
+    print(3.14159);      // double
+    print("Hello");      // const char*
+
+    return 0;
+}
+```
+
+# Data Types
+Here are the fundamental data types:
+- Integer (int)
+```cpp
+int num = 42;
+```
+- Floating-Point (float, double)
+```cpp
+float pi = 3.14f;
+```
+```cpp
+double pi_high_precision = 3.1415926535;
+```
+- Character (char)
+```cpp
+char letter = 'A';
+```
+- Boolean (bool)
+```cpp
+bool is_cpp_great = true;
+```
+
+Here are the derived data types:
+- Arrays
+```cpp
+int numbers[5] = {1, 2, 3, 4, 5};
+int scores[10] = {100,95,98}; // Partially initialized array. 100,95,98 initialized on first 3 indexes, rest indexes are initialized with 0
+int allZero[0] = {0};         // initialized all to zero 
+```
+- Pointers
+```cpp
+int num = 42;
+int* pNum = &num;
+```
+- References
+```cpp
+int num = 42;
+int& numRef = num;
+```
+
+Here are the user-defined data types:
+- Structures (struct)
+```cpp
+struct Person {
+    std::string name;
+    int age;
+    float height;
+};
+
+Person p1 = {"John Doe", 30, 5.9};
+```
+- Classes (class)
+```cpp
+class Person {
+public:
+    std::string name;
+    int age;
+
+    void printInfo() {
+        std::cout << "Name: " << name << ", Age: " << age << '\n';
+    };
+};
+
+Person p1;
+p1.name = "John Doe";
+p1.age = 30;
+```
+- Union (unions)
+```
+union Data {
+    int num;
+    char letter;
+    float decimal;
+};
+
+Data myData;
+myData.num = 42;
+```
