@@ -3,6 +3,8 @@
 This repository contains my personal study notes for C++. 
 You can use this as a comprehensive guide for C++.
 
+[Summary](./SUMMARY.md)
+
 # Table of Contents
 - [Installation](#installation)
 - [Code Editors](#code-editors)
