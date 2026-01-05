@@ -36,6 +36,7 @@ You can use this as a comprehensive guide for C++.
     - [Static Typing](#static-typing)
     - [Dynamic Typing](#dynamic-typing)
     - [Run-Time Type Identification](#run-time-type-identification)
+- [Pointers and References](#pointers-and-references)
 
 # Installation
 
@@ -525,4 +526,73 @@ There are two operators for RTTI:
 `dynamic_cast` is a `type-casting` operator that performs a runtime type check and safely downcasts a base pointer or reference to a derived pointer or reference. It returns null or throws a `bad_cast` exception (if casting references) when the casting fails.
 
 [dynamic-cast.cpp](./dynamic-cast.cpp)
+
+# Pointers and References
+
+## Pointers
+
+A pointer is a variable that stores the memory address of another variable.
+
+Declaration of a pointer:
+```
+dataType *pointerName;
+```
+
+Initialisation of a pointer:
+```
+int num = 10;
+int *ptr = &num;  // Pointer 'ptr' now points to the memory address of 'num'
+```
+
+Accessing value of a pointer:
+```
+int value = *ptr; // Value now contains the value of the variable that 'ptr' points to (i.e., 10)
+```
+
+Function pointer:
+```
+int add(int a, int b)
+{
+  return a + b;
+}
+
+int main()
+{
+  int (*funcptr) (int, int) = add; // Pointer 'funcptr' now points to the functions 'add'
+  funcptr(4, 5); // Return 9
+}
+```
+
+## References
+
+A refernece is an alias for an existing variable. It is a different name for the same memory location.
+
+Declaration of a reference:
+```
+dataType &referenceName = existingVariable;
+```
+
+Initialisation of a reference:
+```
+int num = 10;
+int &ref = num; // Reference 'ref' is now an alias of 'num'
+```
+
+## Constant Pointers
+
+A constant pointer is a pointer that cannot change the address it holds after intialisation.
+
+```cpp
+int x = 10;
+int y = 20;
+int* const ptr = &x;   // Constant pointer to int
+
+*ptr = 15;             // Allowed: we can change the value of x
+// ptr = &y;           // Error: cannot make ptr point to y
+```
+
+Rule:
+- You cannot change what it points to.
+- You can change the value at the address.
+
 
