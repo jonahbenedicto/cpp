@@ -13,4 +13,5 @@
     - User-Defined Data Types (Structures, Classes, Unions)
 - Static Typing and Dynamic Typing (`void*` pointer, `std::any` (C++17))
 - Run Time Type Identification RTTI (`typeid` operator, `dynamic_cast` operator)
+- Pointers and References (Pointers, References, Constant Pointers and Pointers to Constants)
 
