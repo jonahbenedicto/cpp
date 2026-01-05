@@ -30,6 +30,10 @@ You can use this as a comprehensive guide for C++.
 - [Static Polymorphism](#static-polymorphism)
     - [Function Overloading](#function-overloading)
     - [Templates](#templates)
+- [Data Types](#data-types)
+    - [Static Typing](#static-typing)
+    - [Dynamic Typing](#dynamic-typing)
+    - [Run-Time Type Identification](#run-time-type-identification)
 
 # Installation
 
@@ -387,46 +391,61 @@ int main() {
 
 # Data Types
 Here are the fundamental data types:
-- Integer (int)
+
+- Integer (int): Whole numbers both positive and negative.
+
 ```cpp
 int num = 42;
 ```
-- Floating-Point (float, double)
+
+- Floating-Point (float, double): Real numbers with a decimal point.
+
 ```cpp
 float pi = 3.14f;
 ```
+
 ```cpp
 double pi_high_precision = 3.1415926535;
 ```
-- Character (char)
+- Character (char): A single digit, letter or symbol.
+
 ```cpp
 char letter = 'A';
 ```
-- Boolean (bool)
+- Boolean (bool): A logical value for 1 = true and 0 = false.
+
 ```cpp
 bool is_cpp_great = true;
 ```
 
 Here are the derived data types:
-- Arrays
+
+- Arrays: Used to store multiple values of the same data type.
+
 ```cpp
 int numbers[5] = {1, 2, 3, 4, 5};
 int scores[10] = {100,95,98}; // Partially initialized array. 100,95,98 initialized on first 3 indexes, rest indexes are initialized with 0
 int allZero[0] = {0};         // initialized all to zero 
 ```
-- Pointers
+
+- Pointers: Used to store memory address of a variable.
+
 ```cpp
 int num = 42;
 int* pNum = &num;
 ```
-- References
+
+- References: A way to share memory locations.
+
 ```cpp
 int num = 42;
 int& numRef = num;
 ```
 
 Here are the user-defined data types:
-- Structures (struct)
+
+- Structures (struct): Used to store related variables and methods in public.
+
 ```cpp
 struct Person {
     std::string name;
@@ -436,7 +455,9 @@ struct Person {
 
 Person p1 = {"John Doe", 30, 5.9};
 ```
-- Classes (class)
+
+- Classes (class): Similar to a struct but can define access modifiers.
+
 ```cpp
 class Person {
 public:
@@ -452,7 +473,10 @@ Person p1;
 p1.name = "John Doe";
 p1.age = 30;
 ```
-- Union (unions)
+
+- Union (unions): Unions are used to store data types in the same memory 
+location.
+
 ```
 union Data {
     int num;
@@ -463,3 +487,40 @@ union Data {
 Data myData;
 myData.num = 42;
 ```
+
+## Static Typing
+Static typing means that the variables type is determined at compile time.
+
+C++ is a statically-typed programming language which means it uses static typing to determine data types and performs type checking during compile time.
+
+[static-typing.cpp](./static-typing.cpp)
+
+## Dynamic Typing
+Dynamic typing means that the variables type is determined at run time.
+
+There are two ways to use dynamic typing:
+- `void*` Pointers: a generic pointer that can point to objects of any data 
+type.
+
+[void-star-pointers.cpp](./void-star-pointers.cpp)
+
+- `std::any` (C++17): A generalised type-safe container for single values of any type.
+
+[std-any.cpp](./std-any.cpp)
+
+# Run Time Type Identification
+
+There are two operators for RTTI:
+- `typeid` operator
+- `dynamic_cast` operator
+
+## Type Id Operator
+`typeid` is an operator that returns a reference to an object of type `std::type_info`, which contains information about the type of the object. The header file `<typeinfo>` should be included to use typeid.
+
+[type-id.cpp](./type-id.cpp)
+
+## Dynamic Cast Operator
+`dynamic_cast` is a `type-casting` operator that performs a runtime type check and safely downcasts a base pointer or reference to a derived pointer or reference. It returns null or throws a `bad_cast` exception (if casting references) when the casting fails.
+
+[dynamic-cast.cpp](./dynamic-cast.cpp)
+
