@@ -571,7 +571,7 @@ int main()
 
 ## References
 
-A refernece is an alias for an existing variable. It is a different name for the same memory location.
+A reference is an alias for an existing variable. It is a different name for the same memory location.
 
 Declaration of a reference:
 ```
@@ -583,6 +583,50 @@ Initialisation of a reference:
 int num = 10;
 int &ref = num; // Reference 'ref' is now an alias of 'num'
 ```
+
+Function parameters:
+```cpp
+void swap(int& a, int& b) {
+    int temp = a;
+    a = b;
+    b = temp;
+}
+
+int main() {
+   int x = 5, y = 10;
+   std::cout << "Before Swap: x = " << x << " y = " << y << '\n'; // Outputs 5 10
+   
+   swap(x, y);
+   std::cout << "After Swap: x = " << x << " y = " << y << '\n';  // Outputs 10 5
+}
+```
+
+References in range based for loops:
+```cpp
+std::vector<std::string> stooges {"xyz", "abc", "def"};
+
+// Read-only, no copies
+for (auto const &str : stooges)
+    std::cout << str << std::endl;
+
+// Makes a copy of each string
+for (auto str : stooges)
+    std::cout << str << std::endl;
+
+// Direct reference, can modify original elements
+for (auto &str : stooges)
+    str += "!";
+
+// Makes a copy of each string, but prevents modification of the copy
+for (const auto str : stooges)
+    std::cout << str << std::endl;
+```
+
+Summary:
+- Use `auto const &` for **read-only access** (best efficiency).
+- Use `auto &` when you need to **modify elements in place**.
+- Use `auto` when you need a **mutable copy**.
+- Use `const auto` when you want a **read-only copy** inside the loop to prevent accidental modification.
 
 ## Constant Pointer
 
