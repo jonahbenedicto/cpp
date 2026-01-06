@@ -43,6 +43,13 @@ You can use this as a comprehensive guide for C++.
     - [Pointer to Constant](#pointer-to-constant)
     - [Constant Pointer to Constant](#constant-pointer-to-constant)
     - [Constant Pointers and Pointers to Constants Summary](#constant-pointers-and-pointers-to-constants-summary)
+    - [Memory Model](#memory-model)
+    - [Lifetime of Objects](#lifetime-of-objects)
+    - [Smart Pointers](#smart-pointers)
+        - [Unique Pointer](#unique-pointer)
+        - [Shared Pointer](#shared-pointer)
+        - [Weak Pointer](#weak-pointer)
+    - [Raw Pointer](#raw-pointer)
 
 # Installation
 
@@ -681,3 +688,35 @@ Rule:
 - `int* const ptr`: constant pointer, mutable pointee
 - `const int* ptr`: mutable pointer, constant pointee
 - `const int* const ptr`: constant pointer, constant pointee
+
+## Memory Model
+
+Stack memory:
+
+Heap memory:
+
+Data Segment:
+
+Code Segment:
+
+## Lifetime of Objects
+
+Static Storage Duration:
+
+Thread Storage Duration:
+
+Automatic Storage Duration:
+
+Dynamic Storage Duration:
+
+## Smart Pointers
+
+### Unique Pointer
+
+### Shared Pointer
+
+### Weak Pointer
+
+## Raw Pointer
+
+
