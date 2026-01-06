@@ -770,11 +770,18 @@ delete ptr;
 A smart pointer is a wrapper for a raw pointer that adds features like automatic memory management, preventing leaks by deleting the pointed-to object when it's no longer needed.
 
 ### Unique Pointer
+`unique_ptr` is a smart pointer that manages a dynamically allocated object, and it was introduced in C++11. It is defined in the `<memory>` header file. Here are the key points about `unique_ptr`:
+- Ownership: `unique_ptr` owns the object it points to. Only one `unique_ptr` can own an object at a time.
+- Move Semantics: Since only one `unique_ptr` can own an object, it cannot be copied. However, it can be transferred (moved) from one `unique_ptr` to another using move semantics (std::move).
+- Memory Management: `unique_ptr` automatically deletes the object it points to when it goes out of scope, so there's no need to manually call delete.
 
 ### Shared Pointer
+Shared pointers are objects which store pointers to dynamically allocated (heap) objects. They behave much like built-in C++ pointers except that they automatically delete the object pointed to at the appropriate time. Shared pointers are particularly useful in the face of exceptions as they ensure proper destruction of dynamically allocated objects. They can also be used to keep track of dynamically allocated objects shared by multiple owners.
 
 ### Weak Pointer
+The `weak_ptr` is one of the smart pointers that provide the capability of a pointer with some reduced risks as compared to the raw pointer. The `weak_ptr`, just like `shared_ptr` has the capability to point to the resource owned by another `shared_ptr` but without owning it. In other words, they are able to create a non-owning reference to the object managed by `shared_ptr`.
 
 ## Raw Pointer
+A raw pointer is a variable that stores a direct memory address, giving low-level access to data, but unlike safer "smart pointers," it lacks automatic memory management, meaning developers must manually handle allocation and deallocation to prevent memory leaks or dangling pointers, making them powerful but risky. They are "raw" because they offer no built-in lifetime guarantees or safety checks, requiring careful use to avoid undefined behavior. 
 
 
