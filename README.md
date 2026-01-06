@@ -691,7 +691,13 @@ Rule:
 
 ## Memory Model
 
-Stack memory:
+Stack memory is used for automatic storage duration variables, such as local variables and function call data. Stack memory is managed by the compiler, and it's allocation and deallocation are done automatically. The stack memory is also a LIFO (Last In First Out) data structure, meaning that the most recent data allocated is the first to be deallocated.
+
+```cpp
+void functionExample() {
+    int x = 10; // x is stored in the stack memory
+}
+```
 
 Heap memory:
 
